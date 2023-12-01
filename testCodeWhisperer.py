@@ -33,5 +33,5 @@ def upload_file(file_name, bucket, object_name=None):
 
 
 if __name__ == '__main__':
-    upload_file('questions', 'scottedwards2000')
-#    print("File uploaded successfully")
+   result = upload_file('questions', 'scottedwards2000')
+   print(result)
