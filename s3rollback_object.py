@@ -26,7 +26,6 @@ def rollback_object(bucket, object_key, version_id):
         key=attrgetter("last_modified"),
         reverse=True,
     )
-
     logger.debug(
         "Got versions:\n%s",
         "\n".join(
