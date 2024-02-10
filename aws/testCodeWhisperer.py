@@ -33,5 +33,10 @@ def upload_file(file_name, bucket, object_name=None):
 
 
 if __name__ == '__main__':
-   result = upload_file('questions', 'scottedwards2000')
-   print(result)
+
+    s3 = boto3.client('s3')
+    response = s3.get_object(Bucket='glue-ray-data-620109146561-us-east-1', Key='books.csv', Range='bytes=0-300')
+    contents = response['Body'].read()
+    print(contents)
+#   result = upload_file('questions', 'scottedwards2000')
+#   print(result)
